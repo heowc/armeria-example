@@ -1,2 +1,6 @@
 # Project exclude paths
-/getting-started/target/
+*/target/
+
+# IntelliJ IDEA
+.idea
+*.iml
