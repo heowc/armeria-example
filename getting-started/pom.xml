@@ -33,10 +33,6 @@
             <groupId>com.linecorp.armeria</groupId>
             <artifactId>armeria</artifactId>
         </dependency>
-        <!--<dependency>
-            <groupId>com.linecorp.armeria</groupId>
-            <artifactId>armeria-tomcat</artifactId>
-        </dependency>-->
         <dependency>
             <groupId>com.linecorp.armeria</groupId>
             <artifactId>armeria-logback</artifactId>
