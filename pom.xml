@@ -13,6 +13,7 @@
 
     <modules>
         <module>getting-started</module>
+        <module>annotated-service</module>
     </modules>
 
 </project>
