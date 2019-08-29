@@ -15,6 +15,7 @@
         <module>getting-started</module>
         <module>annotated-service</module>
         <module>springboot-integration</module>
+        <module>redis</module>
     </modules>
 
 </project>
