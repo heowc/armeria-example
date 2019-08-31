@@ -27,31 +27,39 @@ public class RedisApplication {
     }
 
     public static void main(String[] args) {
-        ServerBuilder sb = new ServerBuilder();
-        Server server = sb.http(8080)
+        Server server = newServer(8080);
+        server.start().join();
+        logger.info("Server has been stared");
+
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+            server.stop().join();
+            logger.info("Server has been stopped.");
+        }));
+    }
+
+    private static Server newServer(int port) {
+        final ServerBuilder sb = new ServerBuilder();
+        return sb.http(port)
                 .serverListener(new ServerListenerBuilder()
                         .addStartingCallback(s -> {
                             redisServer.start();
-                            logger.info("redis start");
+                            logger.info("Embedded redis server has been started");
                         })
                         .addStoppingCallback(s -> {
-                            if (redisServer.isActive()) {
-                                redisServer.stop();
-                            }
-                            logger.info("redis stop");
+                            redisServer.stop();
+                            logger.info("Embedded redis server has been stopped");
                         })
                         .build())
                 .service("/", new AbstractHttpService() {
 
                     private RedisTemplate redisTemplate = new RedisTemplate("redis://@localhost:6379");
+
                     @Override
                     protected HttpResponse doGet(ServiceRequestContext ctx, HttpRequest req) throws Exception {
                         return HttpResponse.of(String.format("Hello, Armeria %d!!", redisTemplate.incr("count")));
                     }
                 })
                 .build();
-        CompletableFuture<Void> future = server.start();
-        future.join();
     }
 }
 
@@ -59,11 +67,11 @@ class RedisTemplate {
 
     private final RedisClient redisClient;
 
-    public RedisTemplate(String uri) {
+    RedisTemplate(String uri) {
         redisClient = RedisClient.create(uri);
     }
 
-    public Long incr(String key) {
+    Long incr(String key) {
         final StatefulRedisConnection<String, String> connection = redisClient.connect();
         final RedisCommands<String, String> syncCommands = connection.sync();
         try {
