@@ -16,6 +16,7 @@
         <module>annotated-service</module>
         <module>springboot-integration</module>
         <module>redis</module>
+        <module>guice</module>
     </modules>
 
 </project>
