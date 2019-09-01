@@ -17,6 +17,7 @@
         <module>springboot-integration</module>
         <module>redis</module>
         <module>guice</module>
+        <module>decorating-service</module>
     </modules>
 
 </project>
