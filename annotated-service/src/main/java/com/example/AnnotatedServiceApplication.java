@@ -4,6 +4,7 @@ import com.linecorp.armeria.common.HttpResponse;
 import com.linecorp.armeria.server.Server;
 import com.linecorp.armeria.server.ServerBuilder;
 import com.linecorp.armeria.server.annotation.Get;
+import com.linecorp.armeria.server.annotation.PathPrefix;
 
 public class AnnotatedServiceApplication {
 
@@ -20,6 +21,7 @@ public class AnnotatedServiceApplication {
     }
 }
 
+@PathPrefix("/")
 class IndexService {
 
     @Get("/")
