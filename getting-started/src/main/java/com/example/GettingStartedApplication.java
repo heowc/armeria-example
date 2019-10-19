@@ -9,7 +9,7 @@ import java.util.concurrent.CompletableFuture;
 public class GettingStartedApplication {
 
     public static void main(String[] args) {
-        ServerBuilder sb = new ServerBuilder();
+        ServerBuilder sb = Server.builder();;
         Server server = sb.http(8080)
                 .service("/", (ctx, res) -> HttpResponse.of("Hello, Armeria!"))
                 .build();

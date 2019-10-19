@@ -14,7 +14,7 @@ public class AnnotatedServiceApplication {
     }
 
     private static Server newServer(int port) {
-        final ServerBuilder sb = new ServerBuilder();
+        final ServerBuilder sb = Server.builder();
         return sb.http(port)
                 .annotatedService(new IndexService())
                 .build();

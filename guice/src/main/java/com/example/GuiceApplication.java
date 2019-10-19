@@ -33,7 +33,7 @@ public class GuiceApplication {
     }
 
     private static Server newServer(int port) {
-        final ServerBuilder sb = new ServerBuilder();
+        final ServerBuilder sb = Server.builder();
         return sb.http(port)
                 .annotatedService(injector.getInstance(IndexService.class))
                 .serviceUnder("/docs", new DocService())

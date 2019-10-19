@@ -18,7 +18,7 @@ public class DecoratingServiceApplication {
     }
 
     private static Server newServer(int port) {
-        final ServerBuilder sb = new ServerBuilder();
+        final ServerBuilder sb = Server.builder();
         HttpService service = new IndexService();
         return sb.http(port)
                 .service("/", service)
