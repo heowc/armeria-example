@@ -12,12 +12,13 @@
     <name>armeria-example</name>
 
     <modules>
-        <module>getting-started</module>
         <module>annotated-service</module>
-        <module>springboot-integration</module>
-        <module>redis</module>
-        <module>guice</module>
         <module>decorating-service</module>
+        <module>getting-started</module>
+        <module>prometheus-metrics</module>
+        <module>guice</module>
+        <module>redis</module>
+        <module>springboot-integration</module>
     </modules>
 
 </project>
