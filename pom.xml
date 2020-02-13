@@ -18,7 +18,8 @@
         <module>prometheus-metrics</module>
         <module>guice</module>
         <module>redis</module>
-        <module>springboot-integration</module>
+        <module>springboot-minimal</module>
+        <module>springboot-actuator</module>
     </modules>
 
 </project>
