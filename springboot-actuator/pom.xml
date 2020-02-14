@@ -36,11 +36,11 @@
 
         <dependency>
             <groupId>com.linecorp.armeria</groupId>
-            <artifactId>armeria-spring-boot-autoconfigure</artifactId>
+            <artifactId>armeria-spring-boot-starter</artifactId>
         </dependency>
         <dependency>
             <groupId>com.linecorp.armeria</groupId>
-            <artifactId>armeria-spring-boot-actuator-autoconfigure</artifactId>
+            <artifactId>armeria-spring-boot-actuator-starter</artifactId>
         </dependency>
 
         <dependency>
