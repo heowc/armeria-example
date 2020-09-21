@@ -27,14 +27,14 @@ public class DecoratingServiceApplication {
                     @Override
                     public HttpResponse serve(ServiceRequestContext ctx, HttpRequest req) throws Exception {
                         logger.info("second");
-                        return delegate().serve(ctx, req);
+                        return unwrap().serve(ctx, req);
                     }
                 }).decorate(delegate -> new SimpleDecoratingHttpService(delegate) {
 
                     @Override
                     public HttpResponse serve(ServiceRequestContext ctx, HttpRequest req) throws Exception {
                         logger.info("first");
-                        return delegate().serve(ctx, req);
+                        return unwrap().serve(ctx, req);
                     }
                 }))
                 .build();
@@ -44,7 +44,7 @@ public class DecoratingServiceApplication {
 class IndexService extends AbstractHttpService {
 
     @Override
-    public HttpResponse serve(ServiceRequestContext ctx, HttpRequest req) throws Exception {
+    public HttpResponse doGet(ServiceRequestContext ctx, HttpRequest req) throws Exception {
         return HttpResponse.of("Hello, Armeria!");
     }
 }

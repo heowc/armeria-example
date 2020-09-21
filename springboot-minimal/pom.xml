@@ -33,7 +33,7 @@
         </dependency>
         <dependency>
             <groupId>com.linecorp.armeria</groupId>
-            <artifactId>armeria-spring-boot-starter</artifactId>
+            <artifactId>armeria-spring-boot2-starter</artifactId>
         </dependency>
         <dependency>
             <groupId>com.linecorp.armeria</groupId>

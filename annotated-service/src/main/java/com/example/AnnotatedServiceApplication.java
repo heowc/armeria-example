@@ -24,7 +24,7 @@ public class AnnotatedServiceApplication {
 @PathPrefix("/")
 class IndexService {
 
-    @Get("/")
+    @Get
     public HttpResponse index() {
         return HttpResponse.of("Hello, Armeria!");
     }

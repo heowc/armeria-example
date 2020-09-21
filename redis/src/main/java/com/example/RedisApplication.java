@@ -40,12 +40,12 @@ public class RedisApplication {
     private static Server newServer(int port) {
         final ServerBuilder sb = Server.builder();
         return sb.http(port)
-                .serverListener(new ServerListenerBuilder()
-                        .addStartingCallback(s -> {
+                .serverListener(ServerListener.builder()
+                        .whenStarting(it -> {
                             redisServer.start();
                             logger.info("Embedded redis server has been started");
                         })
-                        .addStoppingCallback(s -> {
+                        .whenStopping(it -> {
                             redisServer.stop();
                             logger.info("Embedded redis server has been stopped");
                         })
