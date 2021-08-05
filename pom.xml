@@ -15,7 +15,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>11</java.version>
-        <armeria.version>1.1.0</armeria.version>
+        <armeria.version>1.9.2</armeria.version>
     </properties>
 
     <modules>
@@ -23,8 +23,9 @@
         <module>client</module>
         <module>decorating-service</module>
         <module>getting-started</module>
-        <module>prometheus-metrics</module>
+        <module>graphql-minimal</module>
         <module>guice</module>
+        <module>prometheus-metrics</module>
         <module>redis</module>
         <module>springboot-minimal</module>
         <module>springboot-actuator</module>
