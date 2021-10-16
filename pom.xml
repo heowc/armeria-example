@@ -28,6 +28,7 @@
         <module>prometheus-metrics</module>
         <module>redis</module>
         <module>springboot-minimal</module>
+        <module>springboot-tomcat-mixed</module>
         <module>springboot-actuator</module>
         <module>static-files</module>
     </modules>

@@ -1,0 +1,91 @@
+2021-10-16 16:40:19.044 DEBUG 48014 --- [o-8081-Acceptor] o.apache.tomcat.util.threads.LimitLatch  : Counting up[http-nio-8081-Acceptor] latch=1
+2021-10-16 16:40:19.044 DEBUG 48014 --- [o-8081-Acceptor] o.apache.tomcat.util.threads.LimitLatch  : Counting up[http-nio-8081-Acceptor] latch=2
+2021-10-16 16:40:19.063 DEBUG 48014 --- [nio-8081-exec-1] o.a.coyote.http11.Http11InputBuffer      : Before fill(): parsingHeader: [true], parsingRequestLine: [true], parsingRequestLinePhase: [0], parsingRequestLineStart: [0], byteBuffer.position(): [0], byteBuffer.limit(): [0], end: [0]
+2021-10-16 16:40:19.064 DEBUG 48014 --- [nio-8081-exec-1] o.a.tomcat.util.net.SocketWrapperBase    : Socket: [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@35c4c480:org.apache.tomcat.util.net.NioChannel@418fad7a:java.nio.channels.SocketChannel[connected local=/0:0:0:0:0:0:0:1:8081 remote=/0:0:0:0:0:0:0:1:62841]], Read from buffer: [0]
+2021-10-16 16:40:19.064 DEBUG 48014 --- [nio-8081-exec-1] org.apache.tomcat.util.net.NioEndpoint   : Socket: [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@35c4c480:org.apache.tomcat.util.net.NioChannel@418fad7a:java.nio.channels.SocketChannel[connected local=/0:0:0:0:0:0:0:1:8081 remote=/0:0:0:0:0:0:0:1:62841]], Read direct from socket: [726]
+2021-10-16 16:40:19.064 DEBUG 48014 --- [nio-8081-exec-1] o.a.coyote.http11.Http11InputBuffer      : Received [GET /async HTTP/1.1
+Host: localhost:8081
+Connection: keep-alive
+sec-ch-ua: "Chromium";v="94", "Google Chrome";v="94", ";Not A Brand";v="99"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en,ko;q=0.9
+Cookie: Idea-18f4c4b3=a7b40ee9-0495-4d27-912c-ee7ec2cdb820
+
+]
+2021-10-16 16:40:19.076 DEBUG 48014 --- [nio-8081-exec-1] org.apache.tomcat.util.http.Parameters   : Set query string encoding to UTF-8
+2021-10-16 16:40:19.077 DEBUG 48014 --- [nio-8081-exec-1] o.a.t.util.http.Rfc6265CookieProcessor   : Cookies: Parsing b[]: Idea-18f4c4b3=a7b40ee9-0495-4d27-912c-ee7ec2cdb820
+2021-10-16 16:40:19.079 DEBUG 48014 --- [nio-8081-exec-1] o.a.c.authenticator.AuthenticatorBase    : Security checking request GET /async
+2021-10-16 16:40:19.079 DEBUG 48014 --- [nio-8081-exec-1] org.apache.catalina.realm.RealmBase      :   No applicable constraints defined
+2021-10-16 16:40:19.081 DEBUG 48014 --- [nio-8081-exec-1] o.a.c.a.jaspic.AuthConfigFactoryImpl     : Loading persistent provider registrations from [/private/var/folders/2j/fw7045dn3451dcxljk1tm0nm0000gn/T/tomcat.8081.8482052713279698349/conf/jaspic-providers.xml]
+2021-10-16 16:40:19.082 DEBUG 48014 --- [nio-8081-exec-1] o.a.c.authenticator.AuthenticatorBase    : Not subject to any constraint
+2021-10-16 16:40:19.083  INFO 48014 --- [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-16 16:40:19.083  INFO 48014 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-10-16 16:40:19.083 DEBUG 48014 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2021-10-16 16:40:19.083 DEBUG 48014 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2021-10-16 16:40:19.083 DEBUG 48014 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2021-10-16 16:40:19.084 DEBUG 48014 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1fd4c04d
+2021-10-16 16:40:19.084 DEBUG 48014 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@2e3310b
+2021-10-16 16:40:19.084 DEBUG 48014 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2021-10-16 16:40:19.084  INFO 48014 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-10-16 16:40:19.090 DEBUG 48014 --- [nio-8081-exec-1] org.apache.tomcat.util.http.Parameters   : Set encoding to UTF-8
+2021-10-16 16:40:19.090 DEBUG 48014 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/async", parameters={}
+2021-10-16 16:40:19.092 DEBUG 48014 --- [nio-8081-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.IndexController#async()
+2021-10-16 16:40:19.103 DEBUG 48014 --- [nio-8081-exec-1] o.apache.catalina.core.AsyncContextImpl  : Req:     null  CReq:     null  RP:     null  Stage: -  Thread: http-nio-8081-exec-1  State:                  N/A  Method: Constructor  URI: N/A
+2021-10-16 16:40:19.103 DEBUG 48014 --- [nio-8081-exec-1] org.apache.coyote.AsyncStateMachine      : Changing async state from [DISPATCHED] to [STARTING]
+2021-10-16 16:40:19.103 DEBUG 48014 --- [nio-8081-exec-1] o.apache.catalina.core.AsyncContextImpl  : Firing onStartAsync() event for any AsyncListeners
+2021-10-16 16:40:19.103 DEBUG 48014 --- [nio-8081-exec-1] o.s.w.c.request.async.WebAsyncManager    : Started async request
+2021-10-16 16:40:19.104 DEBUG 48014 --- [         task-1] o.s.w.c.request.async.WebAsyncManager    : Async result set, dispatch to /async
+2021-10-16 16:40:19.104 DEBUG 48014 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting but response remains open for further handling
+2021-10-16 16:40:19.104 DEBUG 48014 --- [         task-1] o.apache.catalina.core.AsyncContextImpl  : Req: 3b7e89a9  CReq: 35b960b6  RP: 3186e2d9  Stage: 3  Thread:               task-1  State:                  N/A  Method: dispatch     URI: /async
+2021-10-16 16:40:19.105 DEBUG 48014 --- [nio-8081-exec-1] o.apache.coyote.http11.Http11Processor   : Socket: [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@35c4c480:org.apache.tomcat.util.net.NioChannel@418fad7a:java.nio.channels.SocketChannel[connected local=/0:0:0:0:0:0:0:1:8081 remote=/0:0:0:0:0:0:0:1:62841]], Status in: [OPEN_READ], State out: [LONG]
+2021-10-16 16:40:19.105 DEBUG 48014 --- [nio-8081-exec-1] org.apache.coyote.AsyncStateMachine      : Changing async state from [STARTING] to [STARTED]
+2021-10-16 16:40:19.105 DEBUG 48014 --- [nio-8081-exec-1] o.apache.coyote.http11.Http11Processor   : Socket: [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@35c4c480:org.apache.tomcat.util.net.NioChannel@418fad7a:java.nio.channels.SocketChannel[connected local=/0:0:0:0:0:0:0:1:8081 remote=/0:0:0:0:0:0:0:1:62841]], State after async post processing: [LONG]
+2021-10-16 16:40:19.106 DEBUG 48014 --- [         task-1] org.apache.coyote.AsyncStateMachine      : Changing async state from [STARTED] to [DISPATCHING]
+2021-10-16 16:40:19.106 DEBUG 48014 --- [nio-8081-exec-2] o.a.c.authenticator.AuthenticatorBase    : Security checking request GET /async
+2021-10-16 16:40:19.107 DEBUG 48014 --- [nio-8081-exec-2] org.apache.catalina.realm.RealmBase      :   No applicable constraints defined
+2021-10-16 16:40:19.107 DEBUG 48014 --- [nio-8081-exec-2] o.a.c.authenticator.AuthenticatorBase    : Not subject to any constraint
+2021-10-16 16:40:19.107 DEBUG 48014 --- [nio-8081-exec-2] o.apache.catalina.core.AsyncContextImpl  : Req: 3b7e89a9  CReq: 35b960b6  RP: 3186e2d9  Stage: 3  Thread: http-nio-8081-exec-2  State:                  N/A  Method: intDispatch  URI: /async
+2021-10-16 16:40:19.107 DEBUG 48014 --- [nio-8081-exec-2] org.apache.coyote.AsyncStateMachine      : Changing async state from [DISPATCHING] to [DISPATCHED]
+2021-10-16 16:40:19.110 DEBUG 48014 --- [nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : "ASYNC" dispatch for GET "/async", parameters={}
+2021-10-16 16:40:19.111 DEBUG 48014 --- [nio-8081-exec-2] s.w.s.m.m.a.RequestMappingHandlerAdapter : Resume with async result ["Hello, Armeria! (async)"]
+2021-10-16 16:40:19.120 DEBUG 48014 --- [nio-8081-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/html', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
+2021-10-16 16:40:19.120 DEBUG 48014 --- [nio-8081-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing ["Hello, Armeria! (async)"]
+2021-10-16 16:40:19.125 DEBUG 48014 --- [nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Exiting from "ASYNC" dispatch, status 200
+2021-10-16 16:40:19.125 DEBUG 48014 --- [nio-8081-exec-2] o.apache.catalina.core.AsyncContextImpl  : Firing onComplete() event for any AsyncListeners
+2021-10-16 16:40:19.126 DEBUG 48014 --- [nio-8081-exec-2] o.apache.catalina.core.AsyncContextImpl  : Req: 3b7e89a9  CReq: 35b960b6  RP: 3186e2d9  Stage: 3  Thread: http-nio-8081-exec-2  State:                  N/A  Method: recycle      URI: /async
+2021-10-16 16:40:19.126 DEBUG 48014 --- [nio-8081-exec-2] o.apache.coyote.http11.Http11Processor   : Socket: [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@35c4c480:org.apache.tomcat.util.net.NioChannel@418fad7a:java.nio.channels.SocketChannel[connected local=/0:0:0:0:0:0:0:1:8081 remote=/0:0:0:0:0:0:0:1:62841]], Status in: [OPEN_READ], State out: [OPEN]
+2021-10-16 16:40:19.126 DEBUG 48014 --- [nio-8081-exec-2] o.a.coyote.http11.Http11InputBuffer      : Before fill(): parsingHeader: [true], parsingRequestLine: [true], parsingRequestLinePhase: [0], parsingRequestLineStart: [0], byteBuffer.position(): [0], byteBuffer.limit(): [0], end: [726]
+2021-10-16 16:40:19.127 DEBUG 48014 --- [nio-8081-exec-2] o.a.tomcat.util.net.SocketWrapperBase    : Socket: [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@35c4c480:org.apache.tomcat.util.net.NioChannel@418fad7a:java.nio.channels.SocketChannel[connected local=/0:0:0:0:0:0:0:1:8081 remote=/0:0:0:0:0:0:0:1:62841]], Read from buffer: [0]
+2021-10-16 16:40:19.127 DEBUG 48014 --- [nio-8081-exec-2] org.apache.tomcat.util.net.NioEndpoint   : Socket: [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@35c4c480:org.apache.tomcat.util.net.NioChannel@418fad7a:java.nio.channels.SocketChannel[connected local=/0:0:0:0:0:0:0:1:8081 remote=/0:0:0:0:0:0:0:1:62841]], Read direct from socket: [0]
+2021-10-16 16:40:19.127 DEBUG 48014 --- [nio-8081-exec-2] o.a.coyote.http11.Http11InputBuffer      : Received []
+2021-10-16 16:40:19.127 DEBUG 48014 --- [nio-8081-exec-2] o.apache.coyote.http11.Http11Processor   : Socket: [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@35c4c480:org.apache.tomcat.util.net.NioChannel@418fad7a:java.nio.channels.SocketChannel[connected local=/0:0:0:0:0:0:0:1:8081 remote=/0:0:0:0:0:0:0:1:62841]], Status in: [OPEN_READ], State out: [OPEN]
+2021-10-16 16:40:19.127 DEBUG 48014 --- [nio-8081-exec-2] org.apache.tomcat.util.net.NioEndpoint   : Registered read interest for [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@35c4c480:org.apache.tomcat.util.net.NioChannel@418fad7a:java.nio.channels.SocketChannel[connected local=/0:0:0:0:0:0:0:1:8081 remote=/0:0:0:0:0:0:0:1:62841]]
+2021-10-16 16:40:24.914 DEBUG 48014 --- [on(3)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(3)-127.0.0.1: (port 62836) op = 82
+2021-10-16 16:40:24.914 DEBUG 48014 --- [on(3)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(3)-127.0.0.1: (port 62836) op = 80
+2021-10-16 16:40:24.914 DEBUG 48014 --- [on(3)-127.0.0.1] sun.rmi.loader                           : RMI TCP Connection(3)-127.0.0.1: name = "[Ljava.rmi.server.ObjID;", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@73eb80cf
+2021-10-16 16:40:24.915 DEBUG 48014 --- [on(3)-127.0.0.1] sun.rmi.loader                           : RMI TCP Connection(3)-127.0.0.1: name = "java.rmi.server.ObjID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@73eb80cf
+2021-10-16 16:40:24.915 DEBUG 48014 --- [on(3)-127.0.0.1] sun.rmi.loader                           : RMI TCP Connection(3)-127.0.0.1: name = "java.rmi.server.UID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@73eb80cf
+2021-10-16 16:40:24.915 DEBUG 48014 --- [on(3)-127.0.0.1] sun.rmi.loader                           : RMI TCP Connection(3)-127.0.0.1: name = "java.rmi.dgc.VMID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@73eb80cf
+2021-10-16 16:40:24.915 DEBUG 48014 --- [on(3)-127.0.0.1] sun.rmi.loader                           : RMI TCP Connection(3)-127.0.0.1: name = "[B", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@73eb80cf
+2021-10-16 16:40:24.916 DEBUG 48014 --- [on(3)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(3)-127.0.0.1: (port 62836) connection closed
+2021-10-16 16:40:24.916 DEBUG 48014 --- [on(2)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(2)-127.0.0.1: (port 62836) connection closed
+2021-10-16 16:40:24.916 DEBUG 48014 --- [on(3)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(3)-127.0.0.1: close connection
+2021-10-16 16:40:24.916 DEBUG 48014 --- [on(2)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(2)-127.0.0.1: close connection
+2021-10-16 16:40:24.916 DEBUG 48014 --- [on(1)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(1)-127.0.0.1: (port 62836) connection closed
+2021-10-16 16:40:24.917 DEBUG 48014 --- [on(1)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(1)-127.0.0.1: close connection
+2021-10-16 16:40:24.918 DEBUG 48014 --- [on(4)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(4)-127.0.0.1: accepted socket from [127.0.0.1:62843]
+2021-10-16 16:40:24.918 DEBUG 48014 --- [on(4)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(4)-127.0.0.1: (port 62836) op = 80
+2021-10-16 16:40:24.918 DEBUG 48014 --- [on(4)-127.0.0.1] sun.rmi.loader                           : RMI TCP Connection(4)-127.0.0.1: name = "[Ljava.rmi.server.ObjID;", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@73eb80cf
+2021-10-16 16:40:24.918 DEBUG 48014 --- [on(4)-127.0.0.1] sun.rmi.loader                           : RMI TCP Connection(4)-127.0.0.1: name = "java.rmi.server.ObjID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@73eb80cf
+2021-10-16 16:40:24.918 DEBUG 48014 --- [on(4)-127.0.0.1] sun.rmi.loader                           : RMI TCP Connection(4)-127.0.0.1: name = "java.rmi.server.UID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@73eb80cf
+2021-10-16 16:40:24.919 DEBUG 48014 --- [on(4)-127.0.0.1] sun.rmi.loader                           : RMI TCP Connection(4)-127.0.0.1: name = "java.rmi.dgc.VMID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@73eb80cf
+2021-10-16 16:40:24.919 DEBUG 48014 --- [on(4)-127.0.0.1] sun.rmi.loader                           : RMI TCP Connection(4)-127.0.0.1: name = "[B", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@73eb80cf

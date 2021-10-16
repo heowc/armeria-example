@@ -1,0 +1,12 @@
+
+
+armeria:
+  ports:
+    - port: 8080
+      protocols:
+        - http
+server:
+  port: 8081
+logging:
+  level:
+    root: debug
